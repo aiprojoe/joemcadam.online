@@ -390,7 +390,7 @@
     const VAPI_PUBLIC_KEY='5ae2c733-b3ea-485e-9d6f-97d0c3a77d8c';
     const VAPI_ASSISTANT_ID='d2f94ee8-1bf0-400b-af2d-59e223b42767';
     let vapi=null,isCallActive=false;
-    function loadVapiSDK(){return new Promise(r=>{if(window.Vapi){r();return}const p=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.js';s.onload=r;document.head.appendChild(s)})}
+    function loadVapiSDK(){return new Promise(r=>{if(window.Vapi){r();return}const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.js';s.onload=r;document.head.appendChild(s)})}
     async function toggleVapi(){
       const label=document.getElementById('vapiBtnLabel'),status=document.getElementById('vapiStatus'),pulse=document.getElementById('vapiPulse');
       if(VAPI_PUBLIC_KEY==='YOUR_VAPI_PUBLIC_KEY_HERE'){status.textContent='Voice assistant coming soon.';return}
