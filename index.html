@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joe McAdam — AI Systems for Service Businesses</title>
+  <meta name="description" content="Joe McAdam builds done-for-you AI systems that close leads, save 15+ hours/week, and run without you. Founder of Unrivaled Business Solutions." />
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(self), geolocation=()" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://*.vapi.ai wss://*.vapi.ai; img-src 'self' data:; frame-ancestors 'none';" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--cream:#F7F3ED;--charcoal:#1A1A18;--gold:#B8922A;--warm-gray:#8A8479;--dark:#111110;--border:rgba(184,146,42,.2)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.6;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(247,243,237,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;letter-spacing:.04em;color:var(--charcoal);text-decoration:none}
+    .nav-links{display:flex;gap:36px;list-style:none}
+    .nav-links a{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--warm-gray);text-decoration:none;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-cta{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:8px 20px;transition:all .2s}
+    .nav-cta:hover{background:var(--gold);color:#fff}
+    .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px}
+    .hero-content{display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px 80px}
+    .hero-eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+    .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,4vw,4.2rem);font-weight:600;line-height:1.1;color:var(--charcoal);margin-bottom:24px}
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-sub{font-size:1.05rem;color:var(--warm-gray);max-width:440px;margin-bottom:48px;line-height:1.7}
+    .hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .btn-primary{background:var(--charcoal);color:var(--cream);padding:14px 32px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s;display:inline-block}
+    .btn-primary:hover{background:var(--gold)}
+    .btn-secondary{color:var(--charcoal);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s}
+    .btn-secondary:hover{color:var(--gold)}
+    .hero-image{background:var(--charcoal);position:relative;overflow:hidden}
+    .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.88}
+    .hero-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1A1A18 0%,#2A2A28 100%)}
+    .hero-ph span{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;color:rgba(184,146,42,.3)}
+    .trust-strip{background:var(--charcoal);padding:24px 80px;display:flex;align-items:center;gap:48px;overflow-x:auto}
+    .trust-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--warm-gray);white-space:nowrap;flex-shrink:0}
+    .trust-div{width:1px;height:20px;background:rgba(255,255,255,.1);flex-shrink:0}
+    .trust-items{display:flex;gap:40px;flex-wrap:wrap}
+    .trust-item{font-size:.78rem;letter-spacing:.06em;color:rgba(247,243,237,.5);white-space:nowrap}
+    .vapi-strip{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 80px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .vapi-text h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--charcoal);margin-bottom:4px}
+    .vapi-text p{font-size:.85rem;color:var(--warm-gray)}
+    .vapi-btn{display:flex;align-items:center;gap:14px;background:var(--charcoal);border:none;padding:14px 28px;cursor:pointer;transition:background .2s}
+    .vapi-btn:hover{background:var(--gold)}
+    .vapi-pulse{width:10px;height:10px;border-radius:50%;background:var(--gold);position:relative;flex-shrink:0}
+    .vapi-pulse::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--gold);animation:pulse 2s ease-out infinite}
+    @keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(2);opacity:0}}
+    .vapi-btn-label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream)}
+    .vapi-status{font-size:.75rem;color:var(--warm-gray);font-style:italic}
+    .story{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .story-img{position:relative}
+    .story-img img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+    .story-accent{position:absolute;bottom:-20px;right:-20px;width:120px;height:120px;border:2px solid var(--gold);z-index:-1}
+    .eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+    .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:600;line-height:1.15;color:var(--charcoal);margin-bottom:28px}
+    .sec-title em{font-style:italic;color:var(--gold)}
+    .story-body p{font-size:.97rem;color:#5A5650;line-height:1.8;margin-bottom:20px}
+    blockquote{border-left:3px solid var(--gold);padding-left:20px;margin:28px 0}
+    blockquote p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--charcoal)!important;line-height:1.6}
+    .help-sec{background:var(--dark);padding:100px 80px}
+    .help-sec .sec-title{color:var(--cream)}
+    .help-intro{font-size:1rem;color:rgba(247,243,237,.6);max-width:580px;margin-bottom:60px;line-height:1.7}
+    .help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .help-card{background:rgba(255,255,255,.03);border:1px solid rgba(184,146,42,.12);padding:40px 32px;transition:border-color .2s,background .2s}
+    .help-card:hover{border-color:rgba(184,146,42,.35);background:rgba(184,146,42,.04)}
+    .help-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(184,146,42,.25);line-height:1;margin-bottom:20px}
+    .help-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--cream);margin-bottom:12px}
+    .help-card p{font-size:.87rem;color:rgba(247,243,237,.55);line-height:1.7}
+    .why-sec{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .why-stats{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:600;color:var(--gold);line-height:1;margin-bottom:8px}
+    .stat-lbl{font-size:.82rem;color:var(--warm-gray);line-height:1.5}
+    .why-body p{font-size:.97rem;color:#5A5650;line-height:1.8;margin-bottom:20px}
+    .work-sec{background:var(--charcoal);padding:100px 80px}
+    .work-hdr{text-align:center;margin-bottom:64px}
+    .work-hdr .sec-title{color:var(--cream)}
+    .work-intro{font-size:1rem;color:rgba(247,243,237,.55);max-width:520px;margin:0 auto;line-height:1.7}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .work-card{background:rgba(255,255,255,.03);border:1px solid rgba(184,146,42,.15);padding:40px 32px 48px;display:flex;flex-direction:column;transition:border-color .2s}
+    .work-card:hover{border-color:rgba(184,146,42,.4)}
+    .work-card.featured{background:rgba(184,146,42,.08);border-color:var(--gold)}
+    .work-badge{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+    .work-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--cream);margin-bottom:12px}
+    .work-price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:8px}
+    .work-note{font-size:.78rem;color:rgba(247,243,237,.4);margin-bottom:24px}
+    .work-card p{font-size:.87rem;color:rgba(247,243,237,.6);line-height:1.7;flex-grow:1;margin-bottom:32px}
+    .delivs{list-style:none;margin-bottom:36px}
+    .delivs li{font-size:.82rem;color:rgba(247,243,237,.55);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:flex-start;gap:8px}
+    .delivs li::before{content:'—';color:var(--gold);flex-shrink:0}
+    .work-link{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,146,42,.3);padding-bottom:2px;align-self:flex-start;transition:border-color .2s}
+    .work-link:hover{border-color:var(--gold)}
+    .photo-sec{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
+    .photo-pan{position:relative;overflow:hidden}
+    .photo-pan img{width:100%;height:100%;object-fit:cover}
+    .photo-pan-ph{width:100%;height:100%;min-height:500px;display:flex;align-items:center;justify-content:center;background:#1A1A18}
+    .photo-cap{background:var(--cream);display:flex;flex-direction:column;justify-content:center;padding:64px}
+    .photo-cap h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;line-height:1.2;margin-bottom:20px}
+    .photo-cap p{font-size:.95rem;color:var(--warm-gray);line-height:1.7}
+    .faith-sec{background:var(--dark);padding:100px 80px;text-align:center}
+    .faith-sec .sec-title{color:var(--cream)}
+    .faith-intro{font-size:1rem;color:rgba(247,243,237,.55);max-width:600px;margin:0 auto 64px;line-height:1.7}
+    .faith-verse{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;color:rgba(247,243,237,.7);max-width:700px;margin:0 auto 16px;line-height:1.5}
+    .faith-ref{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+    .faith-vals{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:80px;text-align:left}
+    .faith-val h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--cream);margin-bottom:10px}
+    .faith-val p{font-size:.85rem;color:rgba(247,243,237,.5);line-height:1.7}
+    .cta-sec{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .cta-sec .sec-title{margin-bottom:20px}
+    .cta-sec>div>p{font-size:.97rem;color:var(--warm-gray);line-height:1.7;margin-bottom:36px}
+    .cta-panel{background:var(--charcoal);padding:48px}
+    .cta-panel h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--cream);margin-bottom:12px}
+    .cta-panel>p{font-size:.87rem;color:rgba(247,243,237,.55);margin-bottom:28px;line-height:1.6}
+    footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,.06);padding:36px 80px;display:flex;align-items:center;justify-content:space-between}
+    .ftr-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(247,243,237,.6)}
+    .ftr-copy{font-size:.75rem;color:rgba(247,243,237,.3);letter-spacing:.04em}
+    .ftr-links{display:flex;gap:28px}
+    .ftr-links a{font-size:.75rem;color:rgba(247,243,237,.4);text-decoration:none;transition:color .2s}
+    .ftr-links a:hover{color:var(--gold)}
+    @media(max-width:900px){
+      nav{padding:16px 24px}
+      .nav-links{display:none}
+      .hero{grid-template-columns:1fr}
+      .hero-content{padding:60px 24px}
+      .hero-image{min-height:360px}
+      .trust-strip,.vapi-strip{padding:20px 24px}
+      .vapi-strip{flex-direction:column;align-items:flex-start}
+      .story,.why-sec,.cta-sec{grid-template-columns:1fr;padding:60px 24px;gap:40px}
+      .help-sec,.work-sec,.faith-sec{padding:60px 24px}
+      .help-grid,.work-grid,.faith-vals{grid-template-columns:1fr}
+      .photo-sec{grid-template-columns:1fr}
+      .photo-cap{padding:40px 24px}
+      footer{padding:28px 24px;flex-direction:column;gap:16px;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="nav-logo">Joe McAdam</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#what-i-do">What I Do</a></li>
+      <li><a href="#work-with-me">Work With Me</a></li>
+      <li><a href="#faith">Faith</a></li>
+    </ul>
+    <a href="mailto:team@unrivaledbusinesssolutions.com" class="nav-cta">Book a Call</a>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Founder · Unrivaled Business Solutions</p>
+      <h1 class="hero-title">I build AI systems that run your business <em>without you.</em></h1>
+      <p class="hero-sub">Done-for-you automation, AI assistants, and live operations dashboards for service businesses ready to scale past the bottleneck.</p>
+      <div class="hero-actions">
+        <a href="mailto:team@unrivaledbusinesssolutions.com" class="btn-primary">Book a Revenue Audit</a>
+        <a href="#about" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="joe-hero.jpg" alt="Joe McAdam" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=hero-ph><span>JM</span></div>'" />
+    </div>
+  </section>
+
+  <div class="trust-strip">
+    <span class="trust-label">Built for</span><div class="trust-div"></div>
+    <div class="trust-items">
+      <span class="trust-item">Service Businesses $250K–$5M/yr</span>
+      <span class="trust-item">4-Week Done-For-You Builds</span>
+      <span class="trust-item">No DIY. No Guesswork.</span>
+      <span class="trust-item">Pittsburgh-Based. Nationwide.</span>
+    </div>
+  </div>
+
+  <div class="vapi-strip">
+    <div class="vapi-text">
+      <h3>Talk to AiVa — My AI Assistant</h3>
+      <p>Ask anything about what I do, how I work, or whether the Revenue Engine is right for your business.</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:20px">
+      <button class="vapi-btn" id="vapiBtn" onclick="toggleVapi()">
+        <div class="vapi-pulse" id="vapiPulse"></div>
+        <span class="vapi-btn-label" id="vapiBtnLabel">Start Conversation</span>
+      </button>
+      <span class="vapi-status" id="vapiStatus"></span>
+    </div>
+  </div>
+
+  <section class="story" id="about">
+    <div class="story-img">
+      <img src="joe-story.jpg" alt="Joe McAdam" onerror="this.style.display='none'" />
+      <div class="story-accent"></div>
+    </div>
+    <div>
+      <p class="eyebrow">The Story</p>
+      <h2 class="sec-title">Built from the field, <em>not the whiteboard.</em></h2>
+      <div class="story-body">
+        <p>I'm Joe McAdam — founder of Unrivaled Business Solutions, based in Pittsburgh. I came up through operations, sales, and watching service businesses leave serious money on the table because their systems couldn't keep up with their ambition.</p>
+        <blockquote><p>"The gap between a good business and a great one is almost always operational — not effort."</p></blockquote>
+        <p>I build the AI systems that close that gap. Done for you, handed off working. My clients stop being the bottleneck in their own business. That's the whole mission.</p>
+        <p>Faith keeps me grounded. My wife Kathryn keeps me honest. Pittsburgh keeps me hungry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-sec" id="what-i-do">
+    <p class="eyebrow">What I Help With</p>
+    <h2 class="sec-title">Three problems I solve <em>every time.</em></h2>
+    <p class="help-intro">Service businesses at $250K–$5M are all losing money the same ways. I've built systems to fix all three.</p>
+    <div class="help-grid">
+      <div class="help-card"><div class="help-num">01</div><h3>Leads Going Cold</h3><p>AI-powered capture and automated follow-up so every lead gets contacted in minutes — not days — without you touching it.</p></div>
+      <div class="help-card"><div class="help-num">02</div><h3>Manual Operations</h3><p>Custom AI assistants trained on your business handle intake, scheduling, and FAQs automatically — 24/7.</p></div>
+      <div class="help-card"><div class="help-num">03</div><h3>No Visibility</h3><p>Live operations dashboards give you a real-time command center — pipeline, tasks, and revenue in one place.</p></div>
+    </div>
+  </section>
+
+  <section class="why-sec">
+    <div>
+      <p class="eyebrow">The Cost of Doing Nothing</p>
+      <h2 class="sec-title">Every slow follow-up is a <em>lost deal.</em></h2>
+      <div class="why-body">
+        <p>Most service business owners know their ops are behind. One missed follow-up, one lead gone cold — that's not a bad day. That's $10K–$50K+ per year, compounding.</p>
+        <p>The Revenue Engine Setup fixes this in 4 weeks. Not a course. Not a template. A live, working system built for your business.</p>
+        <a href="mailto:team@unrivaledbusinesssolutions.com" class="btn-primary">See If You Qualify</a>
+      </div>
+    </div>
+    <div class="why-stats">
+      <div><div class="stat-num">15+</div><div class="stat-lbl">Hours/week recovered from manual admin</div></div>
+      <div><div class="stat-num">4</div><div class="stat-lbl">Weeks to a fully deployed, live system</div></div>
+      <div><div class="stat-num">$5K</div><div class="stat-lbl">Starting investment — often recovered in the first closed deal</div></div>
+      <div><div class="stat-num">1</div><div class="stat-lbl">Handoff call — your team runs it from there</div></div>
+    </div>
+  </section>
+
+  <section class="work-sec" id="work-with-me">
+    <div class="work-hdr">
+      <p class="eyebrow">Work With Me</p>
+      <h2 class="sec-title">How we can work together</h2>
+      <p class="work-intro">One flagship offer. Two ways to stay engaged after launch.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card featured">
+        <div class="work-badge">★ Flagship Offer</div>
+        <h3>Revenue Engine Setup</h3>
+        <div class="work-price">$5K–$7.5K</div>
+        <div class="work-note">One-time · 4 weeks · Guaranteed deliverables</div>
+        <p>The full done-for-you build. We scope it, build it, deploy it, hand it off working.</p>
+        <ul class="delivs">
+          <li>AI lead capture + follow-up automation</li>
+          <li>Custom AI assistant (intake, FAQs, scheduling)</li>
+          <li>Live Mission Control dashboard</li>
+          <li>30-day post-launch support</li>
+          <li>Full SOPs for your team</li>
+        </ul>
+        <a href="mailto:team@unrivaledbusinesssolutions.com" class="work-link">Book a Revenue Audit →</a>
+      </div>
+      <div class="work-card">
+        <div class="work-badge">Ongoing</div>
+        <h3>Monthly Retainer</h3>
+        <div class="work-price">$997<span style="font-size:1rem;color:rgba(247,243,237,.5)">/mo</span></div>
+        <div class="work-note">Post-launch · Optional · Cancel anytime</div>
+        <p>I stay on for management, optimization, and upgrades as your business grows.</p>
+        <ul class="delivs">
+          <li>Monthly system review + optimization</li>
+          <li>Priority support</li>
+          <li>New automations as needed</li>
+        </ul>
+        <a href="mailto:team@unrivaledbusinesssolutions.com" class="work-link">Ask About Retainer →</a>
+      </div>
+      <div class="work-card">
+        <div class="work-badge">Strategic</div>
+        <h3>Revenue Audit</h3>
+        <div class="work-price" style="font-size:1.4rem">Free · 30 min</div>
+        <div class="work-note">For qualified service businesses only</div>
+        <p>I look at your lead flow and ops — tell you exactly where you're bleeding revenue and whether the Revenue Engine is the right fix.</p>
+        <ul class="delivs">
+          <li>Honest assessment — no pitch pressure</li>
+          <li>Specific revenue leak identified</li>
+          <li>Clear next step</li>
+        </ul>
+        <a href="mailto:team@unrivaledbusinesssolutions.com" class="work-link">Book Your Audit →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="photo-sec">
+    <div class="photo-pan">
+      <img src="joe-kathryn-working.jpg" alt="Joe and Kathryn McAdam" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="photo-pan-ph" style="display:none"><span style="color:rgba(184,146,42,.2);font-family:'Cormorant Garamond',serif;font-size:3rem">JM</span></div>
+    </div>
+    <div class="photo-cap">
+      <p class="eyebrow">Built With Purpose</p>
+      <h3>This isn't just business.<br>It's a calling.</h3>
+      <p>My faith shapes how I run Unrivaled — with integrity, accountability, and a genuine desire to see the people I work with succeed.</p>
+    </div>
+  </div>
+
+  <section class="faith-sec" id="faith">
+    <p class="eyebrow">Faith & Foundation</p>
+    <h2 class="sec-title" style="margin-bottom:20px">What I'm anchored to</h2>
+    <p class="faith-intro">Before the tools, the systems, or the results — there's a foundation. My faith isn't a footnote. It's the reason I do this work the way I do.</p>
+    <div class="faith-verse">"Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."</div>
+    <div class="faith-ref">Colossians 3:23</div>
+    <div class="faith-vals">
+      <div class="faith-val"><h4>Integrity Over Image</h4><p>I won't oversell what a system can do. Real results, honest timelines, no hype.</p></div>
+      <div class="faith-val"><h4>Excellence as Stewardship</h4><p>Every build is my best work — because the time and money a client invests matters.</p></div>
+      <div class="faith-val"><h4>People Before Pipeline</h4><p>The right fit matters more than the next close.</p></div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div>
+      <p class="eyebrow">Ready to Start</p>
+      <h2 class="sec-title">Let's find where you're <em>leaving money.</em></h2>
+      <p>Free, 30 minutes, no pitch pressure. We look at your lead flow and operations together.</p>
+      <a href="mailto:team@unrivaledbusinesssolutions.com" class="btn-primary">Book Your Free Revenue Audit</a>
+    </div>
+    <div class="cta-panel">
+      <h3>Book a Revenue Audit</h3>
+      <p>Service businesses doing $250K–$5M/year. 30 minutes. No fluff.</p>
+      <a href="mailto:team@unrivaledbusinesssolutions.com" class="btn-primary" style="width:100%;text-align:center;display:block">team@unrivaledbusinesssolutions.com</a>
+      <p style="margin-top:16px;font-size:.85rem;color:rgba(247,243,237,.4)">Or visit <a href="https://unrivaledbusinesssolutions.com" style="color:var(--gold);text-decoration:none" rel="noopener noreferrer">unrivaledbusinesssolutions.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="ftr-logo">Joe McAdam · Unrivaled Business Solutions</span>
+    <span class="ftr-copy">© 2026 · Pittsburgh, PA · All rights reserved</span>
+    <div class="ftr-links">
+      <a href="mailto:team@unrivaledbusinesssolutions.com">Email</a>
+      <a href="https://linkedin.com/in/joemcadam" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://unrivaledbusinesssolutions.com" rel="noopener noreferrer">UBS</a>
+    </div>
+  </footer>
+
+  <script>
+    const VAPI_PUBLIC_KEY='YOUR_VAPI_PUBLIC_KEY_HERE';
+    const VAPI_ASSISTANT_ID='YOUR_VAPI_ASSISTANT_ID_HERE';
+    let vapi=null,isCallActive=false;
+    function loadVapiSDK(){return new Promise(r=>{if(window.Vapi){r();return}const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@vapi-ai/web@latest/dist/index.js';s.onload=r;document.head.appendChild(s)})}
+    async function toggleVapi(){
+      const label=document.getElementById('vapiBtnLabel'),status=document.getElementById('vapiStatus'),pulse=document.getElementById('vapiPulse');
+      if(VAPI_PUBLIC_KEY==='YOUR_VAPI_PUBLIC_KEY_HERE'){status.textContent='Voice assistant coming soon.';return}
+      if(isCallActive){if(vapi)vapi.stop();isCallActive=false;label.textContent='Start Conversation';pulse.style.background='var(--gold)';status.textContent='';return}
+      label.textContent='Connecting…';status.textContent='Starting AiVa…';
+      try{
+        await loadVapiSDK();vapi=new window.Vapi(VAPI_PUBLIC_KEY);
+        vapi.on('call-start',()=>{isCallActive=true;label.textContent='End Call';pulse.style.background='#ef4444';status.textContent='Connected — AiVa is listening.'});
+        vapi.on('call-end',()=>{isCallActive=false;label.textContent='Start Conversation';pulse.style.background='var(--gold)';status.textContent='Call ended.';setTimeout(()=>{status.textContent=''},3000)});
+        vapi.on('error',e=>{console.error(e);isCallActive=false;label.textContent='Start Conversation';status.textContent='Connection failed — try again.'});
+        await vapi.start(VAPI_ASSISTANT_ID);
+      }catch(err){label.textContent='Start Conversation';status.textContent='Error starting assistant.'}
+    }
+  </script>
+</body>
+</html>
